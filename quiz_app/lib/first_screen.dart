@@ -25,7 +25,7 @@ class FirstScreen extends StatelessWidget {
           const SizedBox(height: 30),
           OutlinedButton.icon(
             onPressed: () {
-              debugPrint('Quiz started');
+              
             },
             style: OutlinedButton.styleFrom(
               foregroundColor: Colors.white,

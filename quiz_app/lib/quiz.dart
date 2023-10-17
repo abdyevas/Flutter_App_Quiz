@@ -39,7 +39,7 @@ class _QuizState extends State<Quiz> {
                 Color.fromARGB(255, 94, 175, 112)
               ], 
               begin: Alignment.bottomCenter,
-              end: Alignment.  topCenter,
+              end: Alignment.topCenter,
             ),
           ),
           child: activeScreen,

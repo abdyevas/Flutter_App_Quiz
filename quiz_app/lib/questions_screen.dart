@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'dart:math';
 import 'package:quiz_app/answer_button.dart';
 import 'package:quiz_app/data/questions.dart';
 
@@ -13,9 +12,17 @@ class QuestionsScreen extends StatefulWidget {
 }
 
 class _QuestionsScreenState extends State<QuestionsScreen> {
+  var currentQuestionIndex = 0;
+
+  void answerQuestion() {
+    setState(() {
+      currentQuestionIndex ++;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
-    final currentQuestion = questions[Random().nextInt(questions.length)];
+    final currentQuestion = questions[currentQuestionIndex];
 
     return SizedBox(
       width: double.infinity,
@@ -29,15 +36,15 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
               currentQuestion.question,
               style: const TextStyle(
                 color: Colors.white,
-                fontSize: 18,
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
               ),
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 30),
             ...currentQuestion.shuffledAnswers().map((answer) {
-              return AnswerButton(answer, () {});
-            }
-            ),
+              return AnswerButton(answer, answerQuestion);
+            }),
           ],
         ),
       ),

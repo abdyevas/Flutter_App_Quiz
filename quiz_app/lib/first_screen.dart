@@ -20,7 +20,7 @@ class FirstScreen extends StatelessWidget {
             'Check your Football knowledge!',
             style: TextStyle(
               color: Color.fromARGB(255, 179, 255, 231),
-              fontSize: 24,
+              fontSize: 22,
             ),
           ),
           const SizedBox(height: 30),
@@ -30,7 +30,7 @@ class FirstScreen extends StatelessWidget {
               foregroundColor: Colors.white,
               backgroundColor: const Color.fromARGB(255, 73, 167, 101),
               textStyle: const TextStyle(
-                fontSize: 18,
+                fontSize: 20,
               ),
             ),
             icon: const Icon(Icons.arrow_right_alt),

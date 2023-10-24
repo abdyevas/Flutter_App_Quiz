@@ -7,14 +7,16 @@ class SummaryItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // final isCorrectAnswer = item['correct_answer'] == item['chosen_answer'];
+    final isCorrectAnswer = item['correct_answer'] == item['chosen_answer'];
 
     return Padding(
       padding: const EdgeInsets.symmetric(
         vertical: 8,
       ),
       child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          
           const SizedBox(width: 20),
           Expanded(
             child: Column(
@@ -34,7 +36,7 @@ class SummaryItem extends StatelessWidget {
                 Text(
                   item['chosen_answer'] as String,
                   style: const TextStyle(
-                    color: Colors.blueAccent,
+                    color: Color.fromARGB(255, 135, 220, 251),
                   ),
                 ),
                 Text(

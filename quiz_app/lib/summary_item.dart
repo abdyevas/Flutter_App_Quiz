@@ -16,7 +16,24 @@ class SummaryItem extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          
+          Container(
+            width: 30,
+            height: 30,
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+              color: isCorrectAnswer
+              ? const Color.fromARGB(255, 97, 160, 254)
+              : const Color.fromARGB(255, 39, 109, 44),
+              borderRadius: BorderRadius.circular(100),
+            ),
+            child: Text(
+              (item['question_index']).toString(),
+              style: const TextStyle(
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+            ),
+          ),
           const SizedBox(width: 20),
           Expanded(
             child: Column(

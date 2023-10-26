@@ -8,6 +8,7 @@ class SummaryItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isCorrectAnswer = item['correct_answer'] == item['chosen_answer'];
+    final questionIndex = item['question_index'];
 
     return Padding(
       padding: const EdgeInsets.symmetric(
@@ -27,7 +28,7 @@ class SummaryItem extends StatelessWidget {
               borderRadius: BorderRadius.circular(100),
             ),
             child: Text(
-              (item['question_index']).toString(),
+              ((questionIndex as int) + 1).toString(),
               style: const TextStyle(
                 fontWeight: FontWeight.bold,
                 color: Colors.white,
@@ -51,15 +52,15 @@ class SummaryItem extends StatelessWidget {
                   height: 5,
                 ),
                 Text(
-                  item['chosen_answer'] as String,
+                  item['correct_answer'] as String,
                   style: const TextStyle(
-                    color: Color.fromARGB(255, 135, 220, 251),
+                    color: Color.fromARGB(255, 144, 203, 254),
                   ),
                 ),
                 Text(
-                  item['correct_answer'] as String,
+                  item['chosen_answer'] as String,
                   style: const TextStyle(
-                    color: Colors.greenAccent,
+                    color: Color.fromARGB(255, 151, 255, 205),
                   ),
                 ),
               ],

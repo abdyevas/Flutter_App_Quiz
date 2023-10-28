@@ -57,7 +57,7 @@ class ResultsScreen extends StatelessWidget {
               label: const Text(
                 'Restart',
                 style: TextStyle(
-                  color: Color.fromARGB(255, 97, 160, 254),
+                  color: Color.fromARGB(255, 125, 208, 255),
                 ),
               ),
             )

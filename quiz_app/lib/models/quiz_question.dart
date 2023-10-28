@@ -1,3 +1,5 @@
+import 'package:quiz_app/data/questions.dart';
+
 class QuizQuestion {
   const QuizQuestion(this.question, this.answers);
 
@@ -9,4 +11,7 @@ class QuizQuestion {
     shuffledList.shuffle();
     return QuizQuestion(question, shuffledList);
   }
+
+  List<QuizQuestion> shuffledQuestions = questions.map((question) => question.shuffle()).toList();
+
 }

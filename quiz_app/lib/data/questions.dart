@@ -56,7 +56,7 @@ const questions = [
     ],
   ),
   QuizQuestion( // 7
-    'Which country has won the most World Cups How many?', 
+    'Which country has won the most World Cups How?', 
     [
       'Brazil',
       'Germany',

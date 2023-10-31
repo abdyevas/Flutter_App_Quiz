@@ -53,7 +53,10 @@ class ResultsScreen extends StatelessWidget {
             const SizedBox(height: 30),
             TextButton.icon(
               onPressed: onRestart,
-              icon: const Icon(Icons.refresh),
+              icon: const Icon(
+                Icons.refresh,
+                color: Color.fromARGB(255, 125, 208, 255),
+              ),
               label: const Text(
                 'Restart',
                 style: TextStyle(

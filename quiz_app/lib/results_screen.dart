@@ -40,8 +40,9 @@ class ResultsScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
-              'You answered $numCorrect out of $numTotal questions correctly!',
+            Text( numCorrect == numTotal
+              ? 'Congratulations! You answered all the questions correctly!'
+              : 'You answered $numCorrect out of $numTotal questions correctly!',
               style: const TextStyle(
                 fontSize: 18,
                 color: Colors.white,
